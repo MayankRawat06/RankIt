@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Topsis Mayank</title>
+</head>
+<body>
+    <nav>
+        <h1 class="heading">Topsis Rank Calculator</h1>
+    </nav>
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            <label for="file_name">File</label>
+            <input name="file" type="file" required>
+
+            <label for="weights">Weights</label>
+            <input name="weights" required>
+
+            <label for="impacts">Impacts</label>
+            <input name="impacts" required>
+
+            <label for="email_id">Email Id</label>
+            <input name="email_id">
+
+            <input class="btn" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
