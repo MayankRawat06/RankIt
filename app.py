@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
 from send_mail import send_mail
-app = Flask(__name__)
+app = Flask(__name__) 
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 def topsis(dataFile, weights, impacts, resFile = 'result.csv') :
   import pandas as pd
   import numpy as np
@@ -8,19 +9,17 @@ def topsis(dataFile, weights, impacts, resFile = 'result.csv') :
   w = list(int(i) for i in weights.split(','))
   im = list(i for i in impacts.split(','))
   if(len(w) != len(im)) :
-    print('Number of elements in Weights and Impacts should be same')
-    sys.exit(0)
+    raise Exception('Number of elements in Weights and Impacts should be same')
   try:
     data = pd.read_csv(dataFile)
   except FileNotFoundError:
-    print('File not Found')
+    raise Exception('File not Found')
   else :
     df = data.iloc[:, 1 :].values
     m = len(data)
     n = len(data.columns) - 1
     if(n < 3):
-      print('Less than 3 Columns')
-      sys.exit(0)
+      raise Exception('Less than 3 Columns')
     rss = []
     for j in range(0, n):
       s = 0
@@ -72,7 +71,11 @@ def hello_world():
         email_id = request.form['email_id']
         file_name = 'data.csv'
         file.save(file_name)
-        data = topsis(file_name, weights, impacts)
+        try:
+            data = topsis(file_name, weights, impacts)
+        except Exception as e:
+            flash(e)
+            return render_template('index.html')
         send_mail(email_id, data.to_html())
         return data.to_html()
     return render_template('index.html')

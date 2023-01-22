@@ -12,13 +12,17 @@ body {
 }
 
 nav {
-    background-color: #266de3;
-    padding: 0.2em 1em;
     text-align: center;
 }
 
 .heading {
-    color: white;
+    font-size: 1.8rem;
+    margin: 0.2em 0;
+}
+
+.by {
+    font-size: 1rem;
+    margin: 0.2em 0;
 }
 
 .container {
@@ -27,23 +31,43 @@ nav {
     height: 100%;
 }
 
+.error {
+    margin-bottom: 2em;
+    background-color: #c55e5e;
+    border: 2px solid rgb(185, 58, 58);
+    border-radius: 8px;
+    padding: 1.2em;
+    color: white;
+}
+
 form {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 2fr;
     gap: 0.5em 2em;
     background-color: white;
     padding: 2em;
     border-radius: 8px;
+    font-size: 1.25rem;
+}
+
+input {
+    background-color: #f0f1f4;
+    border: none;
+    padding: 0.8em;
+    border-radius: 4px;
 }
 
 .btn {
     background-color: #266de3;
-    padding: 0.5em;
+    padding: 0.8em;
     border: none;
     color: white;
     border-radius: 6px;
     font-size: 1.1rem;
+    grid-column: 1 / span 2;
+    margin-top: 1em;
 }
+
 .btn:hover {
     cursor: pointer;
     background-color: #1b56b5;
