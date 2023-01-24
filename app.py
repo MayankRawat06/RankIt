@@ -76,6 +76,7 @@ def hello_world():
         except Exception as e:
             flash(e)
             return render_template('index.html')
-        send_mail(email_id, data.to_html())
+        if email_id:
+          send_mail(email_id, data.to_html())
         return data.to_html()
     return render_template('index.html')
