@@ -1,74 +1,98 @@
-@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url("https://fonts.cdnfonts.com/css/satoshi");
 
-html, body {
-    margin: 0;
-    padding: 0;
-    color: #475569;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #475569;
 }
 
 body {
-    font-family: 'Satoshi', Arial, Helvetica, sans-serif;
-    background-color: #f0f1f4;
+  font-family: "Satoshi", Arial, Helvetica, sans-serif;
+  background-color: #f0f1f4;
 }
 
 nav {
-    text-align: center;
+  text-align: center;
 }
 
 .heading {
-    font-size: 1.8rem;
-    margin: 0.2em 0;
+  font-size: 1.8rem;
+  margin: 0.2em 0;
 }
 
 .by {
-    font-size: 1rem;
-    margin: 0.2em 0;
+  font-size: 1rem;
+  margin: 0.2em 0;
 }
 
 .container {
-    display: grid;
-    place-items: center;
-    height: 100%;
+  display: grid;
+  place-items: center;
+  height: 100%;
 }
 
 .error {
-    margin-bottom: 2em;
-    background-color: #c55e5e;
-    border: 2px solid rgb(185, 58, 58);
-    border-radius: 8px;
-    padding: 1.2em;
-    color: white;
+  margin-bottom: 2em;
+  background-color: #c55e5e;
+  border: 2px solid rgb(185, 58, 58);
+  border-radius: 8px;
+  padding: 1.2em;
+  color: white;
+}
+
+.box {
+  background-color: white;
+  padding: 2em;
+  border-radius: 8px;
 }
 
 form {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 0.5em 2em;
-    background-color: white;
-    padding: 2em;
-    border-radius: 8px;
-    font-size: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5em 2em;
+  font-size: 1.25rem;
 }
 
 input {
-    background-color: #f0f1f4;
-    border: none;
-    padding: 0.8em;
-    border-radius: 4px;
+  background-color: #f0f1f4;
+  border: none;
+  padding: 0.8em;
+  border-radius: 4px;
 }
 
 .btn {
-    background-color: #266de3;
-    padding: 0.8em;
-    border: none;
-    color: white;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    grid-column: 1 / span 2;
-    margin-top: 1em;
+  background-color: #266de3;
+  padding: 0.8em;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  grid-column: 1 / span 2;
+  margin-top: 1em;
 }
 
 .btn:hover {
-    cursor: pointer;
-    background-color: #1b56b5;
+  cursor: pointer;
+  background-color: #1b56b5;
+}
+
+/* table styles */
+table {
+  border: 2px solid black;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
 }
