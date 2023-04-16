@@ -1,4 +1,4 @@
-# Topsis Rank Calculator
+# RankIt
 
 ## What is TOPSIS?
 
