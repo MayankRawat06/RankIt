@@ -7,9 +7,9 @@
 TOPSIS chooses the alternative of shortest Euclidean distance from the ideal solution,
 and greatest distance from the negative-ideal solution.
 
-<br>
+<be>
 
-Topsis-Mayank-102016012 is a Python library for dealing with Multiple Criteria Decision Making(MCDM) problems by using Technique for Order of Preference by Similarity to Ideal Solution(TOPSIS).
+[Topsis-Mayank-102016012](https://pypi.org/project/Topsis-Mayank-102016012/) is a Python library for dealing with Multiple Criteria Decision Making(MCDM) problems by using the Technique for Order of Preference by Similarity to the Ideal Solution(TOPSIS).
 
 ## Installation
 
